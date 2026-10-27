@@ -1,0 +1,10 @@
+bin/
+obj/
+*.dll
+__pycache__/
+*.log
+gameplay_log.jsonl
+moon_grid*.json
+resume_token.json
+driver_config.json
+*.png

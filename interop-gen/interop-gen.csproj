@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>interop-gen</AssemblyName>
+    <!-- References are the game's own BepInEx core assemblies (dev Cpp2IL family) -->
+    <BepCore>C:\Program Files (x86)\Steam\steamapps\common\Moon Sweepers\BepInEx\core</BepCore>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cpp2IL.Core"><HintPath>$(BepCore)\Cpp2IL.Core.dll</HintPath></Reference>
+    <Reference Include="LibCpp2IL"><HintPath>$(BepCore)\LibCpp2IL.dll</HintPath></Reference>
+    <Reference Include="Il2CppInterop.Generator"><HintPath>$(BepCore)\Il2CppInterop.Generator.dll</HintPath></Reference>
+    <Reference Include="Il2CppInterop.Common"><HintPath>$(BepCore)\Il2CppInterop.Common.dll</HintPath></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(BepCore)\Il2CppInterop.Runtime.dll</HintPath></Reference>
+    <Reference Include="AssetRipper.Primitives"><HintPath>$(BepCore)\AssetRipper.Primitives.dll</HintPath></Reference>
+    <Reference Include="AsmResolver"><HintPath>$(BepCore)\AsmResolver.dll</HintPath></Reference>
+    <Reference Include="AsmResolver.DotNet"><HintPath>$(BepCore)\AsmResolver.DotNet.dll</HintPath></Reference>
+    <Reference Include="AsmResolver.PE"><HintPath>$(BepCore)\AsmResolver.PE.dll</HintPath></Reference>
+    <Reference Include="AsmResolver.PE.File"><HintPath>$(BepCore)\AsmResolver.PE.File.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>
